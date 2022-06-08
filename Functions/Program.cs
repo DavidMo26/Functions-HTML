@@ -23,13 +23,7 @@ static void RevershCase(string str)
 }
 static string ReverseAndNot(uint num)
 {
-    string str = num.ToString();
-    string newStr = "";
-    for (int i = str.Length - 1; i >= 0; i--)
-    {
-        newStr += str[i];
-    }
-    return newStr+str;
+    return new string(num.ToString().Reverse().Concat(num.ToString()).ToArray());
 }
 static bool ConsecutiveNumbers(int[] numbers)
 {
